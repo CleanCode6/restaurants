@@ -23,7 +23,10 @@ class DBConnection:
 		QUERY = f"SELECT * FROM Restaurants WHERE restaurant_id ='{restaurant_id};'"
 		cursor.execute(QUERY)
 		result = cursor.fetchall()
-		return result[0]
+		if len(result) > 0:
+			return result[0]
+		else:
+			return None
 
 	def close_connection(self):
 		self.DB.close()
