@@ -30,7 +30,7 @@ class Curator:
 			if rest.rating >= 4.0:
 				if is_item_not_defined(condition, "category"):
 					curated.append(rest)
-				elif rest.category == condition["category"]:
+				elif str(rest.category) == condition["category"]:
 					curated.append(rest)
 
 		position_map = {
