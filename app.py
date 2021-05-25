@@ -15,4 +15,4 @@ def restaurants_list_route():
 @app.route('/restaurants/<rest_id>')
 def restaurant_route(rest_id):
 	cont = Controller()
-	return cont.restaurant_controller(rest_id);
+	return cont.restaurant_controller(1)
