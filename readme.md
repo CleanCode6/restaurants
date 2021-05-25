@@ -1,5 +1,7 @@
 # Overview
 
+CAU Restaurant Guide의 음식점 조회/추천 부분 구현 결과물입니다.
+
 데모 실행
 ```
 flask run
@@ -100,7 +102,9 @@ HTML Template: https://github.com/startbootstrap/startbootstrap-shop-homepage
 
 - 한식(0), 중식(1), 양식(2), 일식(3), 카페(4)
 
-- 등록순(0), 평점순(1), 거리순(2)
+- 평점순(0), 거리순(1)
+
+- 중앙대정문(0), 중앙대후문(1), 상도역(2), 흑석역(3)
 
 **위경도 값**
 - 중앙대정문:37.5066244,126.9524722
