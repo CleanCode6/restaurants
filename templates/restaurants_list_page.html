@@ -1,12 +1,10 @@
 <html>
-
 <head>
-    <title>식당 추천</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<title>식당 추천</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand" href="#!">CAU Restaurant GUIDE</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -18,11 +16,11 @@
         </div>
     </nav>
     <section class="py-5">
-        <div class="container px-4 px-lg-5 mt-5">
-            <h3>식당 추천 리스트</h1>
-                <div class="row mb-4 mt-4">
-                    <div class="col">
-                        <select class="form-select" id="rest-category">
+    	<div class="container px-4 px-lg-5 mt-5">
+			<h3>식당 추천 리스트</h1>
+			<div class="row mb-4 mt-4">
+				<div class="col">
+					<select class="form-select" id="rest-category">
 		                <option selected="">식당 카테고리</option>
 		                <option value="0">한식</option>
 		                <option value="1">양식</option>
@@ -30,83 +28,82 @@
 		                <option value="3">일식</option>
 		                <option value="4">카페</option>
 		            </select>
-                    </div>
-                    <div class="col">
-                        <select class="form-select" id="rest-order">
+		        </div>
+				<div class="col">
+					<select class="form-select" id="rest-order">
 		                <option selected="">정렬</option>
 		                <option value="0">등록순</option>
 		                <option value="1">평점순</option>
 		                <option value="2">거리순</option>
 		            </select>
-                    </div>
-                    <div class="col">
-                        <select class="form-select" id="rest-pos">
+		        </div>
+				<div class="col">
+					<select class="form-select" id="rest-pos">
 		                <option selected="">위치</option>
 		                <option value="0">중앙대학교 정문</option>
 		                <option value="0">중앙대학교 후문</option>
 		                <option value="1">흑석역</option>
 		                <option value="2">상도역</option>
 		            </select>
-                    </div>
-                    <div class="col-1">
-                        <button class="btn btn-outline-dark" id="search-button">검색</button>
-                    </div>
-                </div>
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 ">
-                    {% for rest in result[0]%}
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <a href="restaurants/{{rest.restaurant_id}}">{{rest.restaurant_name}}</a>
-                                    <div>평점: {{rest.rating}}</div>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
+		        </div>
+		        <div class="col-1">
+		        	<button class="btn btn-outline-dark" id="search-button">검색</button>
+		       	</div>
+	        </div>
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 ">
+			{% for rest in result[0]%}
+				<div class="col mb-5">
+					<div class="card h-100">
+						<img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+						<div class="card-body p-4">
+							<div class="text-center">
+								<a href="restaurants/{{rest.restaurant_id}}">{{rest.restaurant_name}}</a>
+								<div>평점: {{rest.rating}}</div>
+								<div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-        </div>
-        <div class="container px-4 px-lg-5 mt-5">
-            <h3>전체 식당 리스트</h1>
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 ">
-                    {% for rest in result[1]%}
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <a href="restaurants/{{rest.restaurant_id}}">{{rest.restaurant_name}}</a>
-                                    <div>평점: {{rest.rating}}</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-        </div>
-    </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript">
-        $('#search-button').on('click', () => {
-            let category = $('#rest-category option:selected').val();
-            if (category !== undefined) category = -1
-            let order = $('#rest-order option:selected').val();
-            if (order !== undefined) order = -1
-            let pos = $('#rest-pos option:selected').val();
-            if (pos !== undefined) pos = -1
-            window.location.href = `/restaurants?category=${category}&order=${order}&pos=${pos}`;
-        });
-    </script>
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+			</div>
+		</div>
+    	<div class="container px-4 px-lg-5 mt-5">
+			<h3>전체 식당 리스트</h1>
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 ">
+			{% for rest in result[1]%}
+				<div class="col mb-5">
+					<div class="card h-100">
+						<img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+						<div class="card-body p-4">
+							<div class="text-center">
+								<a href="restaurants/">{{rest.restaurant_name}}</a>
+								<div>평점: {{rest.rating}}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+			</div>
+		</div>
+	</section>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$('#search-button').on('click', () => {
+			let category = $('#rest-category option:selected').val();
+			if (category === undefined) category = -1
+			let order = $('#rest-order option:selected').val();
+			if (order === undefined) order = -1
+			let pos = $('#rest-pos option:selected').val();
+			if (pos === undefined) pos = -1
+			window.location.href =`/restaurants?category=${category}&order=${order}&pos=${pos}`;
+		});
+	</script>
 </body>
-
 </html>
