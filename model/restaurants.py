@@ -15,7 +15,7 @@ class Restaurants:
 	menu: list[dict] = None
 	position_x: float = 0.0
 	position_y: float = 0.0
-	address: dict = ""
+	address: str = ""
 
 class Parser:
 	@staticmethod
