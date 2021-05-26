@@ -49,8 +49,8 @@ class Curator:
 		start_y = position_map[position][1]
 
 		def comparing_dist(a, b):
-			a_dt = DistanceOperator.calculate_distance(a.position_x, a.position_y, start_x, start_y)
-			b_dt = DistanceOperator.calculate_distance(b.position_x, b.position_y, start_x, start_y)
+			a_dt = DistanceOperator.calculate_position(a.position_x, a.position_y, start_x, start_y)
+			b_dt = DistanceOperator.calculate_position(b.position_x, b.position_y, start_x, start_y)
 			return a_dt - b_dt
 
 		# sort oredering

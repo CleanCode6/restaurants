@@ -114,6 +114,7 @@
 			if (order === undefined) order = -1
 			let pos = $('#rest-pos option:selected').attr('value');
 			if (pos === undefined) pos = -1
+			// specify query request
 			window.location.href =`/restaurants?category=${category}&order=${order}&pos=${pos}`;
 		});
 	</script>

@@ -11,9 +11,9 @@ class Controller:
 		self.db.connect_to_db()
 
 	def restaurants_list_controller(self, request):
-		rests = Parser.to_list(self.db.get_restaurants())
+		search_list = Parser.to_list(self.db.get_restaurants())
 		self.db.close_connection()
-		curated_rests = Curator.curate_restaurant(rests, request.args)
+		curated_rests = Curator.curate_restaurant(search_list, request.args)
 		return self.page_mk.make_restaurants_list_page(curated_rests, rests)
 
 	def restaurant_controller(self, rest_id):
