@@ -8,8 +8,7 @@ class Restaurants:
 	category: int = 0
 	restaurant_name: str = ""
 	description: str = ""
-	rating: float =  0.0
-	pricing: str = ""
+	score: float =  0.0
 	image: str = "" # image link
 	phone: str = ""
 	menu: list[dict] = None

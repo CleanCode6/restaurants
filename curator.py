@@ -27,7 +27,7 @@ class Curator:
 		curated = []
 		# Check condition of category
 		for rest in restaurants:
-			if rest.rating >= 4.0:
+			if rest.score >= 4.0:
 				if is_item_not_defined(condition, "category"):
 					curated.append(rest)
 				elif str(rest.category) == condition["category"]:
@@ -56,7 +56,7 @@ class Curator:
 		# sort oredering
 		if not is_item_not_defined(condition, "order"):
 			if condition["order"] == '0':
-				curated.sort(key=lambda rest: rest.rating, reverse=True)
+				curated.sort(key=lambda rest: rest.score, reverse=True)
 			elif condition["order"] == '1':
 				curated.sort(key=cmp_to_key(comparing_dist))
 
