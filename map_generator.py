@@ -21,6 +21,4 @@ class MapGenerator:
                                             'markers': 'color:blue|label:S|' + params,
                                             'key': self.key})
         url = 'https://maps.googleapis.com/maps/api/staticmap?' + urlparams
-        #r = requests.get(url)
-        #im = Image.open(BytesIO(r.content))
         return url

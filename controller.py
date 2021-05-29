@@ -3,7 +3,6 @@ from curator import Curator
 from db_connection import DBConnection
 from model.restaurants import Restaurants, Parser
 from map_generator import MapGenerator
-from typing import List
 
 category_map = {0: "한식", 1: "중식", 2: "양식", 3:"일식", 4:"카페"}
 
