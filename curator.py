@@ -40,11 +40,13 @@ class Curator:
 			'3': (37.5090436,126.9612882)
 		}
 
+		if not is_item_not_defined(condition, "pos_x") and not is_item_not_defined(condition, "pos_y"):
+			position_map['4'] = (float(condition["pos_x"]), float(condition["pos_y"]))
+
 		if is_item_not_defined(condition, "pos"):
 			position = '0'
 		else:
 			position = condition["pos"]
-
 		start_x = position_map[position][0]
 		start_y = position_map[position][1]
 
