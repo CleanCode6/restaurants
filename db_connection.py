@@ -20,7 +20,7 @@ class DBConnection:
 
 	def get_restaurant(self, restaurant_id):
 		cursor = self.DB.cursor(pymysql.cursors.DictCursor)
-		QUERY = f"SELECT * FROM Restaurants WHERE restaurant_id ='{restaurant_id};'"
+		QUERY = f"SELECT * FROM Restaurants WHERE restaurant_id ='{restaurant_id}';"
 		cursor.execute(QUERY)
 		result = cursor.fetchall()
 		if len(result) > 0:
