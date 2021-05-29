@@ -2,6 +2,7 @@ from page_maker import PageMaker
 from curator import Curator
 from db_connection import DBConnection
 from model.restaurants import Restaurants, Parser
+from map_generator import MapGenerator
 from typing import List
 
 class Controller:
@@ -23,4 +24,7 @@ class Controller:
 		else:
 			rest = {}
 		self.db.close_connection()
+		mgnr = MapGenerator()
+		rest.image_url = mgnr.request_map_url(f"{rest.position_x},{rest.position_y}")
+		rest.category_name = category_map[rest.category];
 		return self.page_mk.make_restaurant_page(rest)
