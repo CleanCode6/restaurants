@@ -4,7 +4,7 @@ CAU Restaurant Guide의 음식점 조회/추천 부분 구현 결과물입니다
 
 구현 내용은 아래와 같은 요구를 포함합니다.
 
-[음식점 조회]
+**[음식점 조회]**
 
 USE CASE : 1번
 
@@ -12,7 +12,7 @@ REQ-07 : 이용자가 따로 음식점을 확인하고 싶을 때, 전체식당 
 
 REQ-08 : 이용자는 지도에서 마킹된 장소(식당)또는 리스트중 한 장소를 선택하여 장소에 대한 정보를 볼 수 있다.
 
-[음식점 추천]
+**[음식점 추천]**
 
 USE CASE : 2번
 
@@ -114,7 +114,7 @@ GET /restaurants?category=0&order=1&pos=2
 - curate_restaurant(restaurants, conditions) : [restaurants]
 7. distance_operator.py
 - **거리 계산**
-- calculate_distance(rx, ry, cx, cy): int 
+- calculate_position(rx, ry, cx, cy): float
 8. map_generator.py
 - **지도 생성**
 - request_map_url(params): str(google maps url)
