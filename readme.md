@@ -31,6 +31,7 @@ REQ-07 : 이용자가 따로 음식점을 확인하고 싶을 때, 전체식당 
 더 자세한 명세는 document에서 확인할 수 있습니다.
 
 Domain Model Document : https://github.com/CleanCode6/CAU_Restaurant_Guide/blob/main/Domain%20Model.pdf
+
 System Design Document : https://github.com/CleanCode6/CAU_Restaurant_Guide/blob/main/CAU_Restaurant_Guides_System_Design_Document.pdf
 
 
