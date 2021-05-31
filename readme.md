@@ -89,7 +89,7 @@ GET /restaurants?category=0&order=1&pos=2
 - **거리 계산**
 - calculate_distance(rx, ry, cx, cy): int 
 8. map_generator.py
-- **w지도 생성**
+- **지도 생성**
 - request_map_url(params): str(google maps url)
 9. template
 - **HTML 템플릿 파일**
