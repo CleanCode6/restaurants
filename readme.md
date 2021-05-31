@@ -2,6 +2,22 @@
 
 CAU Restaurant Guide의 음식점 조회/추천 부분 구현 결과물입니다.
 
+구현 내용은 아래와 같은 요구를 포함합니다.
+[음식점 조회]
+USE CASE : 1번
+REQ-07 : 이용자가 따로 음식점을 확인하고 싶을 때, 전체식당 목록에서, 높은 평점순 그리고 최단거리 순서, 음식의 종류 정렬방식을 선택할 수 있다.
+REQ-08 : 이용자는 지도에서 마킹된 장소(식당)또는 리스트중 한 장소를 선택하여 장소에 대한 정보를 볼 수 있다.
+
+[음식점 추천]
+USE CASE : 2번
+REQ-04 : 추천리스트는 이용자의 취향 문답을 기준으로 평점 4.0 이상 음식점을 상위에 배치해서 추천한다.
+REQ-05 : 추천리스트 외의 전체 음식점 목록이 평점순으로 화면에 나타난다.
+REQ-07 : 이용자가 따로 음식점을 확인하고 싶을 때, 전체식당 목록에서, 높은 평점순 그리고 최단거리 순서, 음식의 종류 정렬방식을 선택할 수 있다.
+
+더 자세한 명세는 document에서 확인할 수 있습니다.
+System Design Document : https://github.com/CleanCode6/CAU_Restaurant_Guide/blob/main/CAU_Restaurant_Guides_System_Design_Document.pdf
+Domain Model Document : https://github.com/CleanCode6/CAU_Restaurant_Guide/blob/main/Domain%20Model.pdf
+
 데모 실행
 ```
 flask run
