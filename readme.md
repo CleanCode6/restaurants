@@ -1,3 +1,9 @@
+# 실행 화면
+
+![image](https://s3.ap-northeast-2.amazonaws.com/6unu.net/ezgif.com-gif-maker.gif)
+
+
+
 # Overview
 
 CAU Restaurant Guide의 음식점 조회/추천 부분 구현 결과물입니다.
@@ -24,13 +30,8 @@ REQ-07 : 이용자가 따로 음식점을 확인하고 싶을 때, 전체식당 
 
 더 자세한 명세는 document에서 확인할 수 있습니다.
 
-System Design Document : https://github.com/CleanCode6/CAU_Restaurant_Guide/blob/main/CAU_Restaurant_Guides_System_Design_Document.pdf
-
 Domain Model Document : https://github.com/CleanCode6/CAU_Restaurant_Guide/blob/main/Domain%20Model.pdf
-
-# 실행 화면
-
-![image](https://s3.ap-northeast-2.amazonaws.com/6unu.net/ezgif.com-gif-maker.gif)
+System Design Document : https://github.com/CleanCode6/CAU_Restaurant_Guide/blob/main/CAU_Restaurant_Guides_System_Design_Document.pdf
 
 
 # 데모 실행
