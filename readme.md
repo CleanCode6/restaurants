@@ -28,6 +28,10 @@ System Design Document : https://github.com/CleanCode6/CAU_Restaurant_Guide/blob
 
 Domain Model Document : https://github.com/CleanCode6/CAU_Restaurant_Guide/blob/main/Domain%20Model.pdf
 
+# 실행 화면
+
+![image](https://s3.ap-northeast-2.amazonaws.com/6unu.net/ezgif.com-gif-maker.gif)
+
 
 # 데모 실행
 ```
