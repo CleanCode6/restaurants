@@ -28,7 +28,8 @@ System Design Document : https://github.com/CleanCode6/CAU_Restaurant_Guide/blob
 
 Domain Model Document : https://github.com/CleanCode6/CAU_Restaurant_Guide/blob/main/Domain%20Model.pdf
 
-데모 실행
+
+# 데모 실행
 ```
 flask run
 ```
